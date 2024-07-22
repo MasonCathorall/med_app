@@ -1,5 +1,4 @@
 import React from "react"; 
-import { Link } from "react-router-dom"; 
 import "./Navbar.css"; 
 
 
@@ -12,7 +11,7 @@ function Navbar() {
     <div className="Navbar">
         <nav>
             <div class="nav__logo">
-            <a href="/">
+            <a href="../">
                 StayHealthy 
                 <svg xmlns="http://www.w3.org/2000/svg" height="26" width="26" viewBox="0 0 1000 1000" styles="fill:#3685fb">
                     <title>Doctor With Stethoscope SVG icon</title>
@@ -37,7 +36,7 @@ function Navbar() {
             <ul class="nav__links active">
 
             <li class="link">
-                <a href="../Landing_Page/LandingPage.html">Home</a>
+                <a href="../">Home</a>
             </li>
 
             <li class="link">
@@ -45,12 +44,12 @@ function Navbar() {
             </li>
 
             <li class="link">
-                <a href="../Sign_Up//Sign_Up.html">
+                <a href="../Sign_Up">
                 <button class="btn1">Sign Up</button>
                 </a>
             </li>
             <li class="link">
-                <a href="../Login/Login.html">
+                <a href="../Login">
                 <button class="btn1">Login</button>
                 </a>
             </li>
