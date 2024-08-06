@@ -1,40 +1,43 @@
-// Import necessary modules from React library
 import React, { useEffect } from 'react';
 
-// Import components for routing from react-router-dom library
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-// Import custom Navbar component
-import Navbar from './Components/Navbar/Navbar';
 import Landing_Page from './Components/Landing_Page/Landing_Page';
+import Navbar from './Components/Navbar/Navbar';
 import Sign_Up from './Components/Sign_Up/Sign_Up';
 import Login from './Components/Login/Login';
-import InstantConsultation from './Components/InstantConsultation/InstantConsultation';
-import AppointmentFormIC from './Components/AppointmentFormIC/AppointmentFormIC';
+import InstantConsultation from './Components/InstantConsultationBooking/InstantConsultation';
+import FindDoctorSearch from './Components/FindDoctorSearch/FindDoctorSearch';
+import BookingConsultation from './Components/BookingConsultation';
+import Notification from './Components/Notification/Notification';
+import ReviewFrom from './Components/ReviewForm/ReviewForm';
+import ProfileCard from './Components/ProfileCard/ProfileCard';
+import ReportsLayout from './Components/ReportsLayout/ReportsLayout';
 
-// Function component for the main App
+
 function App() {
 
-  // Render the main App component
-  return (
-    <div className="App">
-        {/* Set up BrowserRouter for routing */}
+     return (
+        <div className="App">
         <BrowserRouter>
-          {/* Display the Navbar component */}
-          <Navbar/>
+          <Notification>
+            <Navbar />
+              <Routes>
+                        <Route path="/" element={<Landing_Page />} />
+                        <Route path="/Landing_Page" element={<Landing_Page />} />
+                        <Route path="/Sign_Up" element={<Sign_Up />} />
+                        <Route path="/Login" element={<Login />} />
+                        <Route path="/instant-consultation" element={<InstantConsultation />} />
+                        <Route path='/finddoctor' element={<FindDoctorSearch />} />
+                        <Route path='/search/doctors' element={<BookingConsultation />} />  
+                        <Route path='/reviews' element={<ReviewFrom />} />
+                        <Route path='/profile' element={<ProfileCard />} />
+                        <Route path='/reports' element={<ReportsLayout />} />  
 
-          {/* Set up the Routes for different pages */}
-          <Routes>
-            {/* Define individual Route components for different pages */}
-            <Route path="/" element={<Landing_Page/>}/>
-            <Route path="/signup" element={<Sign_Up/>}/>
-            <Route path="/login" element={<Login/>}/>
-            <Route path="/instant-consultation" element={<InstantConsultation />} />
-          </Routes>
+                </Routes>
+          </Notification>
         </BrowserRouter>
-    </div>
-  );
+        </div>
+    );
 }
 
-// Export the App component as the default export
 export default App;
